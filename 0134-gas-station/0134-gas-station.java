@@ -4,7 +4,7 @@ class Solution {
         int totalgas = 0;
         int totalcost = 0;
         int current = 0;
-        for(int i =0; i < gas.length; i++){
+        for(int i = 0; i < gas.length; i++){
             totalgas += gas[i];
             totalcost += cost[i];
             current = current + gas[i] - cost[i];
