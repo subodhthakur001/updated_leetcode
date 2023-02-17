@@ -14,11 +14,11 @@
  * }
  */
 class Solution {
-    int min = Integer.MAX_VALUE;
     public int minDiffInBST(TreeNode root) {
         List<Integer> list = new ArrayList<>();
         inorder(list,root);
         int diff = 0;
+        int min = Integer.MAX_VALUE;
         for(int i = 1; i < list.size(); i++){
             diff = list.get(i) - list.get(i -1);
             min = Math.min(min,diff);
