@@ -8,8 +8,8 @@ class Solution {
               total += weights[i];
               max = Math.max(max, weights[i]);
           }
-        System.out.println(max);
-        System.out.println(total);
+        // System.out.println(max);
+        // System.out.println(total);
         int s = max;
         int e = total;
         while(s <= e)
