@@ -8,8 +8,8 @@ class Solution {
         }
         for(int i = 0;i <= rowIndex - 1; i++){
              n = n * (rowIndex - i)/ (i + 1);
-            int u=(int) n;
-            ans.add(u);
+            // int u=(int) n;
+            ans.add((int)n);
         }
         
         return ans;
