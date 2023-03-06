@@ -10,7 +10,7 @@ class Solution {
                 list.add(i);
             }
         }
-        System.out.print(list);
+        // System.out.print(list);
        return list.get(k-1); 
         
     }
