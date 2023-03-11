@@ -23,6 +23,10 @@
  *     }
  * }
  */
+/*
+T.C. -> O(N) + O(LOGN)
+S.C. -> O(N)
+*/
 class Solution {
     public TreeNode sortedListToBST(ListNode head) {
         if(head == null){
@@ -38,7 +42,6 @@ class Solution {
     }
     public TreeNode createList(List<Integer> list, int s, int e){
         if(s>e){
-            
             return null;
         }
           int mid = (s + e ) / 2;
