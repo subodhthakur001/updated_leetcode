@@ -8,6 +8,10 @@
  *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
  */
+/*
+T.C. -> O(N *N) + O(N)
+S.C. -> O(N)
+*/
 class Solution {
     public ListNode mergeKLists(ListNode[] lists) {
         PriorityQueue<Integer> pq = new PriorityQueue<>();
@@ -29,7 +33,7 @@ class Solution {
         }
         if(!pq.isEmpty()){
           int i = pq.remove();
-        ans = new ListNode(i);
+         ans = new ListNode(i);
          p = ans;
         }
         
