@@ -1,3 +1,7 @@
+/*
+T.C. -> O(N) + O(N) 
+S.C. -> O(N)
+*/
 class Solution {
     public double average(int[] salary) {
        int max = Integer.MIN_VALUE;
