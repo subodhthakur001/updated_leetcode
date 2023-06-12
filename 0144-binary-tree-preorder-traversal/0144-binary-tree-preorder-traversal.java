@@ -13,36 +13,17 @@
  *     }
  * }
  */
-/*RECURSIVE CODE*/
-/*class Solution {
-    public void preorder(TreeNode root,List<Integer> ans){
-        if(root==null)return;
-        else{
-            ans.add(root.val);
-            preorder(root.left,ans);
-            preorder(root.right,ans);
-        }
+class Solution {
+    public void preorder(TreeNode root,List<Integer> path){
+        if(root == null) return;
+         path.add(root.val);
+        preorder(root.left,path);
+        preorder(root.right,path);
+        
     }
     public List<Integer> preorderTraversal(TreeNode root) {
-         List<Integer> res = new ArrayList<>();
-        preorder(root,res);
-        return res;
-    }
-}*/
-
-/*ITERATIVE METHOD*/
-class Solution {
-    public List<Integer> preorderTraversal(TreeNode root){
-        List<Integer> res = new ArrayList<>();
-        Stack<TreeNode> st = new Stack<>();
-        if(root==null)return res;
-        st.push(root);
-        while(!st.empty()){
-            root = st.pop();
-            res.add(root.val);
-            if(root.right!=null)st.push(root.right);
-            if(root.left!=null)st.push(root.left);
-        }
-        return res;
+        List<Integer> path = new ArrayList<>();
+        preorder(root,path);
+        return path;
     }
 }
