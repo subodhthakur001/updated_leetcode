@@ -22,10 +22,12 @@ class Solution {
         int level = 1;
         while(!q.isEmpty()){
             int size = q.size();
-            List<Integer> list = new ArrayList<>();
+            // List<Integer> list = new ArrayList<>();
+            int tempSum = 0;
             while(size>0){
                 TreeNode curr = q.remove();
-                list.add(curr.val);
+                 tempSum += curr.val;
+                // list.add(curr.val);
                 if(curr.left != null){
                     q.add(curr.left);
                 }
@@ -34,20 +36,20 @@ class Solution {
                 }
                 size--;
             }
-            if(max<sum(list)){
+            if(max<tempSum){
                 ans = level;
-                max = sum(list);
+                max = tempSum;
             }
             level++;
         }
         return ans;
         
     }
-    public int sum(List<Integer> ls){
-        int sum = 0;
-        for(int i : ls){
-            sum += i;
-        }
-        return sum;
-    }
+    // public int sum(List<Integer> ls){
+    //     int sum = 0;
+    //     for(int i : ls){
+    //         sum += i;
+    //     }
+    //     return sum;
+    // }
 }
