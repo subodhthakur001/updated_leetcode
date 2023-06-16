@@ -36,7 +36,7 @@ class Solution {
                 }
                 size--;
             }
-            if(max<tempSum){
+            if(max < tempSum){
                 ans = level;
                 max = tempSum;
             }
