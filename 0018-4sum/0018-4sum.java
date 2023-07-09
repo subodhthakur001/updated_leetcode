@@ -22,7 +22,7 @@ class Solution {
                        list.add(nums[end]);
                        ans.add(list);
                       while(start<end && nums[start]==nums[start+1])start++;
-                        while(end<nums.length-1 && nums[end-1]==nums[end])end--;
+                        while(end >= start && nums[end-1]==nums[end])end--;
                        start++;
                        end--;
                    }
