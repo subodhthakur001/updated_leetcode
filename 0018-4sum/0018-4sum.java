@@ -11,10 +11,7 @@ class Solution {
                    if(sum > target){
                        end--;
                    }
-                    else if(sum < target){
-                       start++;
-                   }
-                   else {
+                else if(sum == target){
                        List<Integer> list = new ArrayList<>();
                        list.add(nums[i]);
                        list.add(nums[j]);
@@ -25,6 +22,9 @@ class Solution {
                         while(end >= start && nums[end-1]==nums[end])end--;
                        start++;
                        end--;
+                   }
+                   else {
+                       start++;
                    }
                   
                }
