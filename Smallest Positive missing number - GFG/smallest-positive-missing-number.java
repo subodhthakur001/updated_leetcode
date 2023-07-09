@@ -11,12 +11,12 @@ class Solution
     {
         // Your code here
        // Your code here
-        HashMap<Integer,Integer> map=new HashMap<>();
+        HashSet<Integer> hs =new HashSet<>();
         for(int i=0;i<arr.length;i++){//loop for inserting elemets of the array into hashmap
-            map.put(arr[i],0);
+            hs.add(arr[i]);
         }
         for(int i=1;i<arr.length+1;i++){//traversing from 1-size
-            if(!map.containsKey(i)){
+            if(!hs.contains(i)){
                 return i;// returning the first element which was missing
             }
         }
