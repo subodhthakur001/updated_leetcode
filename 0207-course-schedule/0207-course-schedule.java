@@ -1,39 +1,34 @@
 class Solution {
-    boolean flag = true;
-    public boolean canFinish(int numCourses, int[][] prerequisites) {
-        Set<Integer> s = new HashSet<>();
-        Map<Integer, List<Integer>> hs = new HashMap<>();
-        for (int[] pre : prerequisites) {
-            int c = pre[0];
-            int prereqCourse = pre[1];
-            hs.putIfAbsent(c, new ArrayList<>());
-            hs.get(c).add(prereqCourse);
-        }
-        System.out.println(hs);
-        for (int i = 0; i < numCourses; i++) {
-            if (!s.contains(i)) {
-                dfs(s, i, hs, new HashSet<>());
+    public boolean detectCycle(List<List<Integer>> v, int src, int[] rst, int[] vis) {
+        vis[src] = 1;
+        rst[src] = 1;
+        for (int x : v.get(src)) {
+            if (vis[x] == 0 && detectCycle(v, x, rst, vis)) {
+                return true;
+            } else if (rst[x] == 1) {
+                return true;
             }
         }
-        
-        return flag;  
+        rst[src] = 0;
+        return false;
     }
-    
-    public void dfs(Set<Integer> s, int curr, Map<Integer, List<Integer>> hs, Set<Integer> s2) {
-        if (s2.contains(curr)) {
-            flag = false; 
-            return;
+
+    public boolean canFinish(int numCourses, int[][] prerequisites) {
+        List<List<Integer>> v = new ArrayList<>();
+        for (int i = 0; i < numCourses; i++) {
+            v.add(new ArrayList<>());
         }
-        if (!hs.containsKey(curr)) {
-            return;
+        Stack<Integer> s = new Stack<>();
+        int[] vis = new int[numCourses];
+        int[] rst = new int[numCourses];
+        for (int[] x : prerequisites) {
+            v.get(x[1]).add(x[0]);
         }
-        s2.add(curr);
-        for (int prereqCourse : hs.get(curr)) {
-            if (!s.contains(prereqCourse)) {
-                dfs(s, prereqCourse, hs, s2);
+        for (int i = 0; i < numCourses; i++) {
+            if (vis[i] == 0 && detectCycle(v, i, rst, vis)) {
+                return false;
             }
         }
-        s2.remove(curr);
-        s.add(curr);
+        return true;
     }
 }
