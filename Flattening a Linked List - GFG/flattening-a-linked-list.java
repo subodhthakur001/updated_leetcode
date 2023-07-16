@@ -123,7 +123,7 @@ class GfG
     {
        List<Integer> list = new ArrayList<>();
        Node temp1 = root;
-       while(temp1 != null){
+       while(temp1 != null){ // n * n
            list.add(temp1.data);
            Node temp2 = temp1.bottom;
            while(temp2 != null){
@@ -132,18 +132,17 @@ class GfG
            }
            temp1 = temp1.next;
        }
-       Collections.sort(list);
-       Node finalanswer = null;
+       Collections.sort(list); // nlogn
+       root = null;
        Node temp = null;
        Node ans = new Node(list.get(0));
-       finalanswer = ans;
+       root = ans;
        temp = ans;
-       for(int i = 1; i < list.size(); i++){
-           Node res = new Node(list.get(i));
-           temp.bottom = res;
+       for(int i = 1; i < list.size(); i++){ // n
+           temp.bottom = new Node(list.get(i));
            temp = temp.bottom;
        }
-       return finalanswer;
+       return root;
     }
 	 
 }
