@@ -132,13 +132,13 @@ class Solution
         ArrayList<Integer> list = new ArrayList<>();
         boolean check = rootToNodePath(root,list,node);
         int i = list.size() - 1;
-        int ans = 0;
+        // int ans = 0;
         int j = 0;
         while(i >= 0){
             if(j == k){
                 break;
             }
-            ans = list.get(i);
+            // ans = list.get(i);
             j++;
             i--;
         }
