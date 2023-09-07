@@ -17,17 +17,14 @@ public class Solution {
             s = s.next;
             f = f.next.next;
             if(s == f){
-                s = head;
+                f = head;
                 break;
-            } 
+            }
         }
-        if(f == null || f.next == null) {
-            return null;
-        }
-        // s = head;
+        if(f == null || f.next == null) return null;
         while(s != f){
             s = s.next;
-            f = f.next;   
+            f = f.next;
         }
         return s;
     }
