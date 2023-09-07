@@ -12,10 +12,9 @@ class Solution {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode start = new ListNode();
         ListNode temp = start;
-        int sum = 0;
         int c = 0;
         while(l1 != null || l2 != null || c != 0){
-            sum = 0;
+            int sum = 0;
             if(l1 != null){
                 sum += l1.val;
                 l1 = l1.next;
