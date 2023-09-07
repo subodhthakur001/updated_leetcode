@@ -24,8 +24,8 @@ class Solution {
                 l2 = l2.next;
             }
             sum += c;
-            c = sum / 10;
             int dig = sum % 10;
+            c = sum / 10;
             ListNode node = new ListNode(dig);
             temp.next = node;
             temp = node;
