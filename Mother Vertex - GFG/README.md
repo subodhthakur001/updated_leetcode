@@ -1,5 +1,5 @@
 # Mother Vertex
-## Easy
+## Medium
 <div class="problems_problem_content__Xm_eO"><p><span style="font-size: 18px;">Given a Directed Graph, find a Mother Vertex in the Graph (<strong>if present</strong>).&nbsp;<br>A Mother Vertex is a vertex through which we can reach all the other vertices of the Graph.</span></p>
 <p><span style="font-size: 18px;"><strong>Example 1:</strong></span></p>
 <pre><span style="font-size: 18px;"><strong>Input: 
@@ -18,4 +18,4 @@ is the output.</span>
 no vertices are there from where we can 
 reach all vertices. So, output is -1.</span>
 </pre>
-<p><span style="font-size: 18px;"><strong>Your Task:</strong><br>You don't need to read or print anything. Your task is to complete the function&nbsp;<strong>findMotherVertex()&nbsp;</strong>which takes V denoting the number of vertices and adjacency list as input parameter and returns the vertices from through which we can traverse all other vertices of the graph. If there is more than one possible nodes then return the node with minimum value. If not possible returns -1.<br><br></span><span style="font-size: 18px;"><strong>Expected Time Complexity: </strong>O(V + E)<br><strong>Expected Space Complexity: </strong>O(V)<br></span><br><span style="font-size: 18px;"><strong>Constraints:</strong><br>1 ≤ V ≤ 500</span></p></div>
+<p><span style="font-size: 18px;"><strong>Your Task:</strong><br>You don't need to read or print anything. Your task is to complete the function&nbsp;<strong>findMotherVertex()&nbsp;</strong>which takes V denoting the number of vertices and adjacency list as input parameter and returns the vertices from through which we can traverse all other vertices of the graph. If there is more than one possible nodes then return the node with minimum value. If not possible returns -1.<br><br></span><span style="font-size: 18px;"><strong>Expected Time Complexity: </strong>O(V + E)<br><strong>Expected Space Complexity: </strong>O(V)<br></span><br><span style="font-size: 18px;"><strong>Constraints:</strong><br>1 ≤ V ≤ 10<sup>5</sup></span></p></div>
