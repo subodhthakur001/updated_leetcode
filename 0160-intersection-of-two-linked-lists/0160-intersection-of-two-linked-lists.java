@@ -13,6 +13,7 @@ public class Solution {
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
         ListNode s = headA;
         ListNode f = headB;
+        
         while(s != f){
             if(s == null){
                 s = headB;
@@ -26,7 +27,6 @@ public class Solution {
             else{
                 f = f.next;
             }
-          
         }
         return s;
     }
