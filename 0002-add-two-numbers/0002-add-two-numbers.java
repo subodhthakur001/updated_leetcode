@@ -13,6 +13,7 @@ class Solution {
         ListNode start = new ListNode();
         ListNode temp = start;
         int c = 0;
+        
         while(l1 != null || l2 != null || c != 0){
             int sum = 0;
             if(l1 != null){
@@ -28,7 +29,7 @@ class Solution {
             c = sum / 10;
             ListNode node = new ListNode(dig);
             temp.next = node;
-            temp = node;
+            temp = temp.next;
         }
         return start.next;
     }
